@@ -1,11 +1,16 @@
 import React from 'react';
+import './JokeButton.css';
 
-const JokeButton = () => {
+interface JokeButtonProps {
+  onClick: () => void;
+}
+
+const JokeButton: React.FC<JokeButtonProps> = React.memo(({onClick}) => {
   return (
-    <div>
-      Joke Button
-    </div>
+    <button className="joke-button" onClick={onClick}>
+      Get a new joke!
+    </button>
   );
-};
+});
 
 export default JokeButton;

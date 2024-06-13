@@ -1,0 +1,15 @@
+.joke-button {
+  padding: 10px 20px;
+  background-color: #a6a6a1;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.joke-button:active {
+  transform: scale(0.90);
+}
