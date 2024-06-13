@@ -1,0 +1,25 @@
+.movie {
+  background-color: #f1f3f5;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #004646;
+}
+
+.remove-movie-button {
+  padding: 6px 12px;
+  background-color: #d7a2a5;
+  color: #004646;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.movie-change {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}

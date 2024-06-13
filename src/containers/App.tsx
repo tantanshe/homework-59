@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import AddMovieForm from './components/AddMovieForm/AddMovieForm';
+import AddMovieForm from '../components/AddMovieForm/AddMovieForm';
 import './App.css';
-import Movie from './components/Movie/Movie';
+import Movie from '../components/Movie/Movie';
 
 const App = () => {
   const [movies, setMovies] = useState([
@@ -33,6 +33,13 @@ const App = () => {
     setMovies(updatedMovies);
   };
 
+  const editMovie = (movieId: string, newText: string) => {
+    const updatedMovies = movies.map(movie =>
+      movie.id === movieId ? {...movie, text: newText} : movie
+    );
+    setMovies(updatedMovies);
+  };
+
   return (
     <>
       <AddMovieForm
@@ -46,6 +53,7 @@ const App = () => {
             key={movie.id}
             movie={movie}
             onRemoveMovie={removeMovie}
+            onEditMovie={editMovie}
           />
         ))}
       </div>
